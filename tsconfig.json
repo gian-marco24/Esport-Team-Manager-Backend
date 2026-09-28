@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    /* Entorno de ejecución y módulos */
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022"],
+
+    /* Directorios de compilación */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* Rutas relativas y Path Aliases (crucial para Arquitectura Hexagonal) */
+    "paths": {
+      "@config/*": ["./src/infrastructure/config/*"],
+      "@domain/*": ["./src/domain/*"],
+      "@application/*": ["./src/application/*"],
+      "@infrastructure/*": ["./src/infrastructure/*"]
+    },
+
+    /* Estrictez y calidad de código */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Interoperabilidad y emisión */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "sourceMap": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
